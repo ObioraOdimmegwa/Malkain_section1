@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+#preloader{
+    background: #232323 ;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#preloader h1{
+    position: relative;
+    font-size: 90px;
+    font-weight: 900;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+}
+
+#preloader h1:before{
+    content: attr(data-text);
+    color: #3b3b3b;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: animate 5s linear ;
+
+}
+
+.section-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.banner-box1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.banner-box2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    
+}
+
+.banner-box2 h1{
+    text-align: start;
+    font-size: 130px;
+    font-weight: 900;
+    background-image: linear-gradient(to right, #1877C7, #18B6B8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 100%;
+    background-position: 100%;
+    animation: animatedText 2s infinite alternate-reverse;
+    margin-left: -100px;
+    z-index: 20;
+}
+
+.banner-box2 h1:nth-child(1){
+    background-image: linear-gradient(to right, #1877C7, #18B6B8);
+    animation-delay: 8s;
+}
+
+.banner-box2 h1:nth-child(2){
+    padding-left: 85px;
+    background-image: linear-gradient(to right, #7F26C7, #F40386);
+    animation-delay: 5s;
+}
+
+.banner-box2 h1:nth-child(3){
+    padding-left: 170px;
+    background-image: linear-gradient(to right, #FE5949, #FABA2D);
+    animation-delay: 2s;
+}
+
+
+.anim1{
+    
+}
+
+@keyframes animate{
+    0%{
+        height: 100%;
+    }
+
+    100%{
+        height: 0%;
+        
+    }
+}
+
+@keyframes animatedText{
+    from{
+        background-position: 40%;
+    }
+
+    to{
+        background-position: 100%;
+        color: black;
+    }
+}
+
+@media screen  and (max-width: 800px){
+    #preloader h1{
+        position: relative;
+        font-size: 50px;
+        font-weight: 900;
+        color: #ffffff;
+        width: 100%;
+    }
+
+    .section-box{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        
+    }
+
+    .banner-box1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #18B6B8;
+        overflow-x: hidden;
+    
+    }
+    .banner-box2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow-x: hidden;
+        
+    }
+
+    .banner-box2 h1{
+        width: 100%;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 900;
+        background-image: linear-gradient(to right, #1877C7, #18B6B8);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-size: 100%;
+        background-position: 100%;
+        animation: animatedText 2s infinite alternate-reverse;
+        z-index: 20;
+    }
+
+    .banner-box2 h1:nth-child(2){
+        padding-left: 0;
+        background-image: linear-gradient(to right, #7F26C7, #F40386);
+        animation-delay: 5s;
+    }
+    
+    .banner-box2 h1:nth-child(3){
+        padding-left: 0;
+        background-image: linear-gradient(to right, #FE5949, #FABA2D);
+        animation-delay: 2s;
+    }
+}
